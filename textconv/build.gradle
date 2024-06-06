@@ -1,0 +1,18 @@
+plugins {
+    id "java"
+    id "application"
+    id "com.github.johnrengelman.shadow" version "8.1.1"
+}
+
+shadowJar {
+    minimize()
+}
+
+application {
+    mainClass = "znemux.textconv.Main"
+}
+
+distTar.enabled = false
+distZip.enabled = false
+shadowDistTar.enabled = false
+shadowDistZip.enabled = false
